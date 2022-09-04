@@ -4,5 +4,6 @@ import analogjsAngular from "@analogjs/astro-angular";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [analogjsAngular()]
+  integrations: [analogjsAngular()],
+  base: '/astro-angular-ex'
 });
