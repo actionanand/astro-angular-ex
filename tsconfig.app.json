@@ -1,3 +1,4 @@
+/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
   "extends": "./tsconfig.json",
   "compileOnSave": false,
@@ -19,7 +20,10 @@
     "noEmit": false,
     "target": "es2020",
     "module": "es2020",
-    "lib": ["es2020", "dom"]
+    "lib": [
+      "es2020",
+      "dom"
+    ]
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
@@ -28,5 +32,7 @@
     "strictTemplates": true
   },
   "files": [],
-  "include": ["src/**/*.ts"]
+  "include": [
+    "src/**/*.ts"
+  ]
 }
