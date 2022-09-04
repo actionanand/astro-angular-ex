@@ -48,6 +48,70 @@ All commands are run from the root of the project, from a terminal:
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
 
+## Creating a New Astro Project
+
+- With npm:
+
+```bash
+npm init astro
+```
+
+- With yarn:
+
+```bash
+yarn create astro
+```
+
+- Follow the prompts, along with choosing Just the `basics` to start. Next, is adding the `@analogjs/astro-angular` integration.
+
+- Use the `astro add` command to install the integration:
+
+```bash
+astro add @analogjs/astro-angular
+```
+
+- Setting up the TypeScript config
+
+    - Create a `tsconfig.app.json` in the root of the project.
+
+```json
+{
+  "extends": "./tsconfig.json",
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "noEmit": false,
+    "target": "es2020",
+    "module": "es2020",
+    "lib": ["es2020", "dom"]
+  },
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true
+  },
+  "files": [],
+  "include": ["src/**/*.ts"]
+}
+```
+
 ## Resources
 
 - [Bringing Angular Components to Astro Islands](https://dev.to/brandontroberts/bringing-angular-components-to-astro-islands-52jp)
+- [Astro - Client Directives](https://docs.astro.build/en/reference/directives-reference/#client-directives)
+- [Analog - Angular](https://analogjs.org/)
+- [Visit ViteConf to learn more about "Vite, Meta-frameworks, and Angular"](https://viteconf.org/)
